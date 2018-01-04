@@ -1,4 +1,4 @@
-# This program shows that without using pandas getting answers on below questions is hard and not convinient
+# This program shows that without using pandas getting answers on below questions is hard and inconvenient
 # (1) Max temperature in New York in month of January
 # (2) List of days when it rained
 # (3) Average speed of wind in month of january
@@ -59,19 +59,14 @@ def get_average_wind_speed():
     total = 0
     count = 0
     for row in __parsed_rows:
-        speed = 0 if row['WindSpeedMPH']=='' else int(row['WindSpeedMPH'])
+        speed = 0 if row['WindSpeedMPH'] == '' else int(row['WindSpeedMPH'])
         total += speed
-        count+=1
-    return total/count
+        count += 1
+    return total / count
 
-if __name__=="__main__":
+if __name__ == "__main__":
     parse_csv()
 
     print("Max temperature is: ",get_max_temperature())
     print ("Days of rain: ", get_days_for_event('Rain'))
     print("Average wind speed is: ", get_average_wind_speed())
-
-
-
-
-
